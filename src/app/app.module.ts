@@ -33,6 +33,7 @@ import { ChamcongComponent } from './Quanli/chamcong/chamcong.component';
 import { NavigatorComponent } from './Navigation/navigator/navigator.component';
 import { ProfilesComponent } from './Navigation/Effects/profiles/profiles.component';
 import { QuanlichucvuComponent } from './Admin/quanlichucvu/quanlichucvu.component';
+import { DiemdanhComponent } from './Nhanvien/diemdanh/diemdanh.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { QuanlichucvuComponent } from './Admin/quanlichucvu/quanlichucvu.compone
     NavigatorComponent,
     ProfilesComponent,
     QuanlichucvuComponent,
+    DiemdanhComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,196 +1,72 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Chấm công</h4>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Điểm danh ngày</span>
+      </div>
+      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="10/09/2020" disabled>
+      <div class="input-group-append">
+        <button class="btn btn-danger" type="button">Điểm danh</button>
+      </div>
+    </div>
+<input type="checkbox" onClick="selectall(this)" />Select All<br />
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Nhập tên hoặc id để tìm kiếm" aria-label="Recipient's username"
+        aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-success" type="button">Tìm kiếm</button>
+      </div>
+    </div>
+
     <div class="row">
-      <div class="col-12">
-        <div class="table-responsive">
-          <div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-            <div class="row">
-              <div class="col-sm-12">
-                <table id="order-listing" class="table dataTable no-footer" role="grid"
-                  aria-describedby="order-listing_info">
-                  <thead>
-                    <tr role="row">
-                      <th class="sorting_asc" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-sort="ascending" aria-label="Order #: activate to sort column descending"
-                        style="width: 67px;">Order #
-                      </th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Purchased On: activate to sort column ascending" style="width: 117.4px;">
-                        Purchased On</th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Customer: activate to sort column ascending" style="width: 85.4px;">
-                        Customer</th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Ship to: activate to sort column ascending" style="width: 64.6px;">Ship to
-                      </th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Base Price: activate to sort column ascending" style="width: 91.8px;">Base
-                        Price</th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Purchased Price: activate to sort column ascending" style="width: 136.6px;">
-                        Purchased Price</th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Status: activate to sort column ascending" style="width: 67.8px;">Status
-                      </th>
-                      <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
-                        aria-label="Actions: activate to sort column ascending" style="width: 71.8px;">Actions
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr role="row" class="odd">
-                      <td class="sorting_1">1</td>
-                      <td>2012/08/03</td>
-                      <td>Edinburgh</td>
-                      <td>New York</td>
-                      <td>$1500</td>
-                      <td>$3200</td>
-                      <td>
-                        <label class="badge badge-info">On hold</label>
-                      </td>
-                      <td>
-                      <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                          <span class="onoffswitch-inner"></span>
-                          <span class="onoffswitch-switch"></span>
-                        </label>
-                      </div>
-                      </td>
-                    </tr>
-                    <tr role="row" class="even">
-                      <td class="sorting_1">2</td>
-                      <td>2015/04/01</td>
-                      <td>Doe</td>
-                      <td>Brazil</td>
-                      <td>$4500</td>
-                      <td>$7500</td>
-                      <td>
-                        <label class="badge badge-danger">Pending</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="odd">
-                      <td class="sorting_1">3</td>
-                      <td>2010/11/21</td>
-                      <td>Sam</td>
-                      <td>Tokyo</td>
-                      <td>$2100</td>
-                      <td>$6300</td>
-                      <td>
-                        <label class="badge badge-success">Closed</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="even">
-                      <td class="sorting_1">4</td>
-                      <td>2016/01/12</td>
-                      <td>Sam</td>
-                      <td>Tokyo</td>
-                      <td>$2100</td>
-                      <td>$6300</td>
-                      <td>
-                        <label class="badge badge-success">Closed</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="odd">
-                      <td class="sorting_1">5</td>
-                      <td>2017/12/28</td>
-                      <td>Sam</td>
-                      <td>Tokyo</td>
-                      <td>$2100</td>
-                      <td>$6300</td>
-                      <td>
-                        <label class="badge badge-success">Closed</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="even">
-                      <td class="sorting_1">6</td>
-                      <td>2000/10/30</td>
-                      <td>Sam</td>
-                      <td>Tokyo</td>
-                      <td>$2100</td>
-                      <td>$6300</td>
-                      <td>
-                        <label class="badge badge-info">On-hold</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="odd">
-                      <td class="sorting_1">7</td>
-                      <td>2011/03/11</td>
-                      <td>Cris</td>
-                      <td>Tokyo</td>
-                      <td>$2100</td>
-                      <td>$6300</td>
-                      <td>
-                        <label class="badge badge-success">Closed</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="even">
-                      <td class="sorting_1">8</td>
-                      <td>2015/06/25</td>
-                      <td>Tim</td>
-                      <td>Italy</td>
-                      <td>$6300</td>
-                      <td>$2100</td>
-                      <td>
-                        <label class="badge badge-info">On-hold</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="odd">
-                      <td class="sorting_1">9</td>
-                      <td>2016/11/12</td>
-                      <td>John</td>
-                      <td>Tokyo</td>
-                      <td>$2100</td>
-                      <td>$6300</td>
-                      <td>
-                        <label class="badge badge-success">Closed</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                    <tr role="row" class="even">
-                      <td class="sorting_1">10</td>
-                      <td>2003/12/26</td>
-                      <td>Tom</td>
-                      <td>Germany</td>
-                      <td>$1100</td>
-                      <td>$2300</td>
-                      <td>
-                        <label class="badge badge-danger">Pending</label>
-                      </td>
-                      <td>
-                        <button class="btn btn-outline-primary">View</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div> 
-          </div>
-        </div>
+      <div class="col-sm-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Hình ảnh</th>
+              <th scope="col">Họ và tên</th>
+              <th scope="col">Điểm danh</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>
+                <img src="https://cuoifly.tuoitre.vn/820/0/ttc/r/2020/07/09/markfb01-1594306085.jpg"
+                  style="height: 150px; width: 150px;">
+              </td>
+              <td style="padding-top: 75px;">Mark</td>
+              <td  style="padding-top: 75px;">
+                <input type="checkbox">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>
+                <img src="https://cuoifly.tuoitre.vn/820/0/ttc/r/2020/07/09/markfb01-1594306085.jpg"
+                  style="height: 150px; width: 150px;">
+              </td>
+              <td style="padding-top: 75px;">Mark</td>
+              <td style="padding-top: 75px;">
+                <input type="checkbox">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>
+                <img src="https://cuoifly.tuoitre.vn/820/0/ttc/r/2020/07/09/markfb01-1594306085.jpg"
+                  style="height: 150px; width: 150px;">
+              </td>
+              <td style="padding-top: 75px;">Mark</td>
+              <td style="padding-top: 75px;">
+                <input type="checkbox">
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

@@ -33,6 +33,7 @@ import { ChitietLuongComponent } from './Quanli/chitiet-luong/chitiet-luong.comp
 import { ChamcongComponent } from './Quanli/chamcong/chamcong.component';
 import { NavigatorComponent } from './Navigation/navigator/navigator.component';
 import { ProfilesComponent } from './Navigation/Effects/profiles/profiles.component';
+import { DiemdanhComponent } from './Nhanvien/diemdanh/diemdanh.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'navigator', pathMatch: 'full' },
@@ -66,6 +67,7 @@ const routes: Routes = [
       { path: 'luong/id', component: ChitietLuongComponent },
       { path: 'info', component: ThongtinTaikhoanComponent },
       { path: 'profile', component: ProfilesComponent },
+      { path: 'diemdanh', component: DiemdanhComponent },
     ]
   },
 
