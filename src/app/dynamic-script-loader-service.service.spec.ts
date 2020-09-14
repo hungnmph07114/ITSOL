@@ -11,7 +11,6 @@ export const ScriptStore: Scripts[] = [
   { name: 'alerts', src: '../assets/js/alerts.js' },
   { name: 'avgrund', src: '../assets/js/avgrund.js' },
   { name: 'bt-maxLength', src: '../assets/js/bt-maxLength.js' },
-
 ];
 
 declare var document: any;
