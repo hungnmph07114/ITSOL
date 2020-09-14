@@ -12,11 +12,11 @@ import * as moment from 'moment';
 @Injectable()
 export class ChamcongComponent implements OnInit {
   api = 'http://localhost:8081/nhanvien';
-  datetime: string = '';
+  ngaythuc: string = '';
   constructor() {
 
-  let monetdate = moment().format('DD/MM/YYYY');
-     this.datetime = monetdate;
+  let momments = moment().format('DD/MM/YYYY');
+     this.ngaythuc = momments;
   }
 
   ngOnInit(): void {}
