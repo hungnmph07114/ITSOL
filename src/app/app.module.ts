@@ -1,3 +1,4 @@
+import { ServicenhanvienService } from './Service/servicenhanvien.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -33,6 +34,12 @@ import { ChamcongComponent } from './Quanli/chamcong/chamcong.component';
 import { NavigatorComponent } from './Navigation/navigator/navigator.component';
 import { ProfilesComponent } from './Navigation/Effects/profiles/profiles.component';
 import { QuanlichucvuComponent } from './Admin/quanlichucvu/quanlichucvu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ServicephongbanService } from './Service/servicephongban.service';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -70,9 +77,14 @@ import { QuanlichucvuComponent } from './Admin/quanlichucvu/quanlichucvu.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    MatSliderModule,
   ],
-  providers: [],
+  providers: [ServicephongbanService, ServicenhanvienService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

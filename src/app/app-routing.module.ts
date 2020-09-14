@@ -44,8 +44,9 @@ const routes: Routes = [
     path: 'admin', component: BodyAdminComponent, children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'taikhoan', component: QuanlitaikhoanComponent},
+      { path: 'taikhoan/:phongbanid', component: QuanlitaikhoanComponent},
       { path: 'phongban', component: QuanliphongbanComponent },
+      { path: 'them', component: ThemphongbanComponent },
       { path: 'addtk', component: ThemtaikhoanComponent },
       { path: 'profile/id', component: ProfilesComponent },
       { path: 'addpb', component: ThemphongbanComponent },

@@ -4,89 +4,22 @@
     <div class="row">
 
 
-
-      <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document" style="margin-top: 30px;">
-          <div class="modal-content">
-            <h5 class="card-header info-color white-text text-center py-4">
-              <strong>Thêm phòng ban mới</strong>
-            </h5>
-            <!-- Popup Thêm phòng ban -->
-            <form class="text-center border border-light p-5" action="#!">
-              <!-- Email -->
-              <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Tên phòng ban">
-              <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Ghi chú">
-              <button class="btn btn-info btn-block my-4" type="submit">Thêm phòng ban</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
       <div class="text-center" style="margin-left: 15px">
-        <a href="" class="btn btn-info btn-block" data-toggle="modal" data-target="#modalSubscriptionForm"><i class="icon-note menu-icon"></i>
+        <a routerLink="/admin/them" class="btn btn-info btn-block"><i class="icon-note menu-icon"></i>
         <span class="menu-title">Thêm phòng ban</span></a>
       </div>
-
-      <div class="row" style = "margin-top: 25px">
-        <!-- <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
-          <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product>
-          <app-product ngClass="col-lg-4 col-md-6 mb-4"></app-product> -->
-        <div ngClass="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="product.img" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">product.name</a>
-              </h4>
-              <h5>product.price</h5>
-              <p class="card-text">product.desc</p>
-              <p class="card-text">product.status ? 'Còn hàng' : 'Hết hàng'</p>
-            </div>
-          </div>
-        </div>
-        <div ngClass="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="product.img" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">product.name</a>
-              </h4>
-              <h5>product.price</h5>
-              <p class="card-text">product.desc</p>
-              <p class="card-text">product.status ? 'Còn hàng' : 'Hết hàng'</p>
-            </div>
-          </div>
-        </div>
-        <div ngClass="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="product.img" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">product.name</a>
-              </h4>
-              <h5>product.price</h5>
-              <p class="card-text">product.desc</p>
-              <p class="card-text">product.status ? 'Còn hàng' : 'Hết hàng'</p>
-            </div>
-          </div>
-        </div>
-        <div ngClass="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="product.img" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">product.name</a>
-              </h4>
-              <h5>product.price</h5>
-              <p class="card-text">product.desc</p>
-              <p class="card-text">product.status ? 'Còn hàng' : 'Hết hàng'</p>
-            </div>
-          </div>
-        </div>
-
+  <div class="row row-cols-1 row-cols-md-3" style="margin-top: 30px;"  >
+  <div class="col mb-4" *ngFor="let pb of phongbans">
+    <div class="card"> <a class="nav-link" href="" routerLink="/admin/taikhoan/{{pb.id}}">
+      <img src={{pb.img}} class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+     <h5 class="card-title">{{pb.tenPhongBan}}</h5>
+        <p class="card-text">{{pb.ghiChu}}</p>
       </div>
-
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </div>
