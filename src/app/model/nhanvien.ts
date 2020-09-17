@@ -1,3 +1,5 @@
+import { PhongBan } from './phongban';
+
 export class NhanVien{
              id: number;
             tenNhanVien: string;
@@ -10,5 +12,8 @@ export class NhanVien{
             email: string;
             img: string;
             action: boolean;
+            phongBan: PhongBan;
+            phongbanid:number;
+            isSelected;
 
 }

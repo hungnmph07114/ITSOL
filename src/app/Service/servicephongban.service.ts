@@ -16,10 +16,17 @@ export class ServicephongbanService {
   Addphongban(phongBan): Observable<PhongBan>{
     return this.http.post<PhongBan>(`${this.api + '/add'}`, phongBan);
   }
+  Editphongban(id , phongBan: PhongBan): Observable<PhongBan>{
+    return this.http.put<PhongBan>(this.api + `/update/${id}`, phongBan);
+  }
   getphongban(): Observable<PhongBan[]>{
     return this.http.get<PhongBan[]>(this.api);
 
   }
+  getonephongban(id): Observable<PhongBan>{
+    return this.http.get<PhongBan>(this.api + `/${id}`);
+  }
+
   upload(b64Image: any) {
     const httpOptions = {
       headers: new HttpHeaders({

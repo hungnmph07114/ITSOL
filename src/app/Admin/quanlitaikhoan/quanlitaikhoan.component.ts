@@ -3,16 +3,17 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServicenhanvienService } from 'src/app/Service/servicenhanvien.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-quanlitaikhoan',
   templateUrl: './quanlitaikhoan.component.html',
   styleUrls: ['./quanlitaikhoan.component.css']
 })
 export class QuanlitaikhoanComponent implements OnInit {
+  name: string;
   totalPages: Array<number>;
   page = 0;
-  size = 3;
+  size = 5;
   order = 'tenNhanVien';
   asc = true;
   isFirst = false;
@@ -23,20 +24,32 @@ export class QuanlitaikhoanComponent implements OnInit {
 
   constructor(private httpClient: HttpClient ,
     private service: ServicenhanvienService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router,) { }
 
   ngOnInit(): void {
-    this.listPhongBan();
+    this.listnhanvien();
+
+  }
+  timkiem(name){
+    this.service.timkiemnhanvien(name).subscribe(data =>{
+      this.nhanvien = data;
+    });
+  }
+
+ themnhanvien() {
+    this.router.navigate([`/admin/themnv/${this.id}`]);
+    console.log(this.id);
   }
   // tslint:disable-next-line: typedef
-  listPhongBan() {
+  listnhanvien() {
     this.route.params.subscribe(praram => {
       this.service.page(this.page, this.size, this.order, this.asc,praram.phongbanid ).subscribe(data =>{
         this.isFirst = data.first;
         this.isLast = data.last;
         this.totalPages = new Array(data.totalPages);
         this.nhanvien = data.content;
-        console.log(praram.phongbanid);
+        this.id = praram.phongbanid;
       }, err => {
         console.log(err.error);
       });
@@ -44,30 +57,30 @@ export class QuanlitaikhoanComponent implements OnInit {
   }
   sort(): void {
     this.asc = !this.asc;
-    this.listPhongBan();
+    this.listnhanvien();
   }
   rewind(): void {
     if (!this.isFirst) {
       this.page--;
-      this.listPhongBan();
+      this.listnhanvien();
     }
   }
 
   forward(): void {
     if (!this.isLast) {
       this.page++;
-      this.listPhongBan();
+      this.listnhanvien();
     }
   }
 
   setPage(page: number): void {
     this.page = page;
-    this.listPhongBan();
+    this.listnhanvien();
   }
 
   setOrder(order: string): void {
     this.order = order;
-    this.listPhongBan();
+    this.listnhanvien();
   }
 
 }

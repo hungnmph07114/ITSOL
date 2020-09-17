@@ -4,7 +4,7 @@ export class PhongBan{
   dienThoai: string;
   ghiChu: string;
   img: string;
-  status: boolean;
+  action: boolean;
   constructor(name: string, sdt: string, ghiChu: string , img: string ){
     this.tenPhongBan = name;
     this.dienThoai = sdt;

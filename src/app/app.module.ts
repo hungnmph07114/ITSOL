@@ -1,3 +1,4 @@
+import { LuongService } from './Service/luong.service';
 import { ServicenhanvienService } from './Service/servicenhanvien.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,17 +21,6 @@ import { ThemtaikhoanComponent } from './Admin/themtaikhoan/themtaikhoan.compone
 import { DetailTaikhoanComponent } from './Admin/detail-taikhoan/detail-taikhoan.component';
 import { ThemphongbanComponent } from './Admin/themphongban/themphongban.component';
 import { DetailPhongbanComponent } from './Admin/detail-phongban/detail-phongban.component';
-import { DanhsachNhanvienComponent } from './Nhanvien/danhsach-nhanvien/danhsach-nhanvien.component';
-import { DanhsachPhongbanComponent } from './Nhanvien/danhsach-phongban/danhsach-phongban.component';
-import { LuongcanhanComponent } from './Nhanvien/luongcanhan/luongcanhan.component';
-import { ThongtinTaikhoanComponent } from './Nhanvien/thongtin-taikhoan/thongtin-taikhoan.component';
-import { QuanliNhanvienComponent } from './Quanli/quanli-nhanvien/quanli-nhanvien.component';
-import { QuanliPhongbanComponent } from './Quanli/quanli-phongban/quanli-phongban.component';
-import { QuanliLuongComponent } from './Quanli/quanli-luong/quanli-luong.component';
-import { ChitietNhanvienComponent } from './Quanli/chitiet-nhanvien/chitiet-nhanvien.component';
-import { ChitietPhongbanComponent } from './Quanli/chitiet-phongban/chitiet-phongban.component';
-import { ChitietLuongComponent } from './Quanli/chitiet-luong/chitiet-luong.component';
-import { ChamcongComponent } from './Quanli/chamcong/chamcong.component';
 import { NavigatorComponent } from './Navigation/navigator/navigator.component';
 import { ProfilesComponent } from './Navigation/Effects/profiles/profiles.component';
 import { QuanlichucvuComponent } from './Admin/quanlichucvu/quanlichucvu.component';
@@ -40,6 +30,10 @@ import { ServicephongbanService } from './Service/servicephongban.service';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { EditComponent } from './Admin/quanliphongban/edit/edit/edit.component';
+import { ThemnhanvienComponent } from './nhanvien/themnhanvien/themnhanvien.component';
+import { ChamCongComponent } from './Admin/cham-cong/cham-cong.component';
+import { LuongComponent } from './luong/luong.component';
 
 @NgModule({
   declarations: [
@@ -59,20 +53,13 @@ import { MatSliderModule } from '@angular/material/slider';
     DetailTaikhoanComponent,
     ThemphongbanComponent,
     DetailPhongbanComponent,
-    DanhsachNhanvienComponent,
-    DanhsachPhongbanComponent,
-    LuongcanhanComponent,
-    ThongtinTaikhoanComponent,
-    QuanliNhanvienComponent,
-    QuanliPhongbanComponent,
-    QuanliLuongComponent,
-    ChitietNhanvienComponent,
-    ChitietPhongbanComponent,
-    ChitietLuongComponent,
-    ChamcongComponent,
     NavigatorComponent,
     ProfilesComponent,
     QuanlichucvuComponent,
+    EditComponent,
+    ThemnhanvienComponent,
+    ChamCongComponent,
+    LuongComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +71,7 @@ import { MatSliderModule } from '@angular/material/slider';
     BrowserAnimationsModule,
     MatSliderModule,
   ],
-  providers: [ServicephongbanService, ServicenhanvienService ],
+  providers: [ServicephongbanService, ServicenhanvienService, LuongService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
